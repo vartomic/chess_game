@@ -128,6 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="chess_game.cpp" />
+    <ClCompile Include="get_index.cpp" />
+    <ClCompile Include="move_figure.cpp" />
+    <ClCompile Include="set_array.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="get_index.h" />
+    <ClInclude Include="matrix.hpp" />
+    <ClInclude Include="move_figure.h" />
+    <ClInclude Include="set_array.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
