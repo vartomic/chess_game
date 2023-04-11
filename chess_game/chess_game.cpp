@@ -4,39 +4,18 @@
 
 #include "matrix.hpp"
 
-//вычислить индексы фигуры
-bool get_index(std::string str_index, size_t& row_index, size_t& col_index) {
+#include "get_index.h"
 
-    for (int i = 0; i < str_index.size(); i++) {
-        //index_find = элемент подстроки
-        auto index_find = str_index[i];
-
-        //если индекс элемента строки [0]
-        if (i == 0) {
-
-            //temp = (кол-во строк - 1) - command[0] (остаток столбцов)
-            auto temp = 'g' - index_find;
-
-            //индекс столбца = кол-во строк - остаток столбцов - 1
-            col_index = 8 - temp - 1;
-        }
-        else if (i == 1) {
-            //индекс строки = char кол-во строк - char command[1]
-            row_index = '8' - index_find;
-        }
-    }
-    return row_index, col_index;
-}
 
 //ход фигуры
-bool move_figure(Matrix<std::string>& chessboard, bool is_white, std::string command){
+bool move_figure(Matrix<std::string>& chessboard, bool is_white, std::string command) {
 
     bool first_move = true;
     bool previous_color = false;
 
     //проверка на пустоту строки
     if (command.empty()) {
-        throw "String is empty";
+        cout << "String is empty";
     }
     else {
         //если первый ход и это ход черных фигур = ошибка
@@ -70,9 +49,11 @@ bool move_figure(Matrix<std::string>& chessboard, bool is_white, std::string com
         else if (first_move == false && previous_color == is_white) {
             throw "Other color should make a move";
         }
-    }  
-    return 0;    
+    }
+    return 0;
 }
+
+
 
 int main(){
     Matrix<std::string> chessboard(9, 9);
@@ -98,7 +79,7 @@ int main(){
 
     cout << endl;
 
-    auto res = move_figure(chessboard, true, "");
+    auto res = move_figure(chessboard, true, "b2b4");
 
     chessboard.print();
     
