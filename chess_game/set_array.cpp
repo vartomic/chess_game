@@ -6,7 +6,7 @@
 #include <string>
 
 string* set_array() {
-    Matrix<std::string>* chessboard(9, 9);
+    Matrix<std::string> chessboard(9, 9);
 
     std::string arr[] = {
         "8","br","bn","bb","bk","bq","bb","bn","br",
@@ -23,9 +23,12 @@ string* set_array() {
     //кол-во элементов массива = размер массива(байт)/размер любого эелемента массива || размер типа массива
     size_t arr_size = sizeof(arr) / sizeof(arr[0]);
 
+
     chessboard.fill(arr, arr_size);
 
-    return chessboard;
+    return &chessboard;
+
+
 }
 
 

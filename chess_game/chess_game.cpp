@@ -8,7 +8,9 @@
 
 int main(){
 
-    string* point = set_array();
+    string* pointer = set_array();
+
+    *pointer = chessboard;
       
     auto res = move_figure(chessboard, true, "b2b4");
 
