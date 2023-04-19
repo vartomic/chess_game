@@ -1,5 +1,3 @@
 #pragma once
 
-#include <string>
-
-string* set_array();
+void set_array();

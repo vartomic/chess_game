@@ -8,12 +8,12 @@
 
 int main(){
 
-    string* pointer = set_array();
+    //Matrix<std::string> *chessboard = set_array();
 
-    *pointer = chessboard;
+    Matrix<std::string>* chessboard = set_array();
       
-    auto res = move_figure(chessboard, true, "b2b4");
+    auto res = move_figure(*chessboard, true, "b2b4");
 
-    chessboard.print();
+    chessboard->print();
     
 }
