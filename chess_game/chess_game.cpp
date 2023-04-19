@@ -8,8 +8,6 @@
 
 int main(){
 
-    //Matrix<std::string> *chessboard = set_array();
-
     Matrix<std::string>* chessboard = set_array();
       
     auto res = move_figure(*chessboard, true, "b2b4");
