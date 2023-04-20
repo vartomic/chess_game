@@ -5,7 +5,8 @@
 
 #include <string>
 
-void set_array() {
+/*set_array возвращает указатель на chessboard*/
+Matrix<std::string>* set_array() {
     static Matrix<std::string> chessboard(9, 9);
 
     std::string arr[] = {
@@ -25,6 +26,8 @@ void set_array() {
 
     chessboard.fill(arr, arr_size);
 
+    /*возвращаем наш объект chessboard*/
+    return &chessboard;
 }
 
 
