@@ -6,13 +6,13 @@
 #include <iostream>
 #include <regex>
 
-//ход фигуры
+//пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 bool move_figure(Matrix<std::string>& chessboard, bool is_white, std::string command){
 
     regex reg("[abcdefgh][0-8][abcdefgh][0-8]");
 
 
-    //проверка на пустоту строки
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     if (command.empty()) {
         return false;
     }
@@ -25,10 +25,10 @@ bool move_figure(Matrix<std::string>& chessboard, bool is_white, std::string com
     
     size_t row_index = 0; size_t col_index = 0;
 
-    //выделение первого индекса из строки
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     std::string index_first = command.substr(0, 2);
 
-    //выделение второго индекса из строки
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     std::string index_second = command.substr(2, 4);
 
     get_index(index_first, row_index, col_index);
