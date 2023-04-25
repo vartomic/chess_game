@@ -1,3 +1,6 @@
 #pragma once
 
-void set_array();
+#include "matrix.hpp"
+#include <string>
+
+Matrix<std::string>* set_array();

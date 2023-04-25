@@ -8,11 +8,13 @@
 
 int main(){
 
-    //Matrix<std::string> *chessboard = set_array();
-
     Matrix<std::string>* chessboard = set_array();
+
+    chessboard->print();
+
+    cout << endl;
       
-    auto res = move_figure(*chessboard, true, "b2b4");
+    auto res = move_figure(*chessboard, true, "a2a3");
 
     chessboard->print();
     
