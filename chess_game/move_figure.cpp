@@ -103,6 +103,12 @@ bool move_figure(Matrix<std::string>& chessboard, bool is_white, std::string com
         break;
     }
 
+    //chessboard(row_index, col_index) = "--";
+
+    //get_index(index_second, row_index, col_index);
+
+   // chessboard(row_index, col_index) = "wp";
+
     
     return 0;
 }
